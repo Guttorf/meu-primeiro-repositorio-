@@ -21,7 +21,7 @@ const Modelodeproduto = mongoose.model('modelodeproduto', {
  
 //  const modelodeproduto = new Modelodeproduto({
 //      produto:'Bateria 60amp',
-//     codigodebarra: 134679852,
+//     codigodebarra: 2,
 //     name: 'Jupiter',
 //     preco: 195
 //  });
@@ -30,7 +30,29 @@ const Modelodeproduto = mongoose.model('modelodeproduto', {
 //  modelodeproduto.save()
 //  console.log('Bateria salva')
 
+const modelodeproduto = new Modelodeproduto({
+   produto:'Bateria 50amp',
+  codigodebarra: 1,
+  name: 'Conner',
+  preco: 155
+});
+
+
+modelodeproduto.save()
+
+
+
 async function exibe () {
    console.log(await Modelodeproduto.find())
 }
 exibe()
+
+// async function exibeTodosOsProdutos () {
+//    console.log(await Modelodeproduto.find())
+// }
+// exibe()
+
+// async function exibe () {
+//    console.log(await Modelodeproduto.findOne())
+// }
+// exibe()

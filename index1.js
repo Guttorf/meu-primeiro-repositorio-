@@ -9,18 +9,28 @@
 // *********************************************************************
 
 const mongoose = require('mongoose');
-mongoose.conneect('mongodb://127.0.0.1:27017/test');
+mongoose.connect('mongodb://127.0.0.1:27017/test');
 
-const Modelodeproduto = mongoose.model('modelodeproduto', {produto: String, codigodebarras: Number, name: String, preco: Number
+const Modelodeproduto = mongoose.model('modelodeproduto', {
+    produto: String, 
+   codigodebarra: Number, 
+   name: String, 
+   preco: Number
 
  });
  
- const modelodeproduto = new produto({
-    produto: 'Bateria',
-    codigodebarras: 134679852,
-    name: 'Jupiter',
-    preco: 195
- })
+//  const modelodeproduto = new Modelodeproduto({
+//      produto:'Bateria 60amp',
+//     codigodebarra: 134679852,
+//     name: 'Jupiter',
+//     preco: 195
+//  });
 
- modelodeproduto.save()
- console.log('salvou')
+
+//  modelodeproduto.save()
+//  console.log('Bateria salva')
+
+async function exibe () {
+   console.log(await Modelodeproduto.find())
+}
+exibe()

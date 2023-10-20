@@ -65,42 +65,33 @@ async function main () {
         raca: String
     })
 
-    cao.create({
-      idade: 5,
-      nome: 'Jojo',
-      raca: 'Golden'
+    // cao.create({
+    //   idade: 5,
+    //   nome: 'Jojo',
+    //   raca: 'Golden'
         
-    })
+    // })
 
-    cao.create({
-      idade: 100,
-      nome: 'Bimo',
-      raca: 'chow-chow'
+//     cao.create({
+//       idade: 100,
+//       nome: 'Bimo',
+//       raca: 'chow-chow'
         
-})
-   cao.save()
-   console.log('Cao salvo')
-}
+// })
+   
 
-    await cao.findOneAndUpdate(
-        {idade: 100},
-        {
-          idade: 100,
-          nome: 'Bimo',
-          raca: 'chow-chow'
-        }
-    )
+    // await cao.findOneAndUpdate(
+    //     {idade: 100},
+    //     {
+    //       idade: 100,
+    //       nome: 'Bimo',
+    //       raca: 'chow-chow'
+    //     }
+    // )
 
-    await cao.findOneAndDelete({})
-
-    
-    console.log(await cao.find())
-
-    console.log(await cao.findOne({}))
-
-
-
-main()
-
+    cao.findOne()
+     console.log( await cao.find())
+      }
+    main()
 
 

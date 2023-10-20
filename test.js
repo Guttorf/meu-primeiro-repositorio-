@@ -27,10 +27,11 @@ async function criaNovoProduto(produto) {
     while(contador <= tamanho){ 
     const tamanho = array.length
     let contador = 0
-    await Produto.create(produto)}
+    await Produto.create(produto[contador]
+        )
+    }
     contador++
 
 }
 
-criaNovoProduto(p)
 

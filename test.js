@@ -21,6 +21,27 @@ async function exibeTodosOsProdutos(){
     console.log(await Produto.find())
 }
 
+
+// FUNCAO DELETAUMPRODUTO
+async function deletaUmProdutoPorNome(nomeADeletar){
+    await Produto.findOneAndDelete({nome: nomeADeletar})
+}
+
+// async function exibeUmProduto
+async function exibeUmProduto (nomeAProcurar) {
+    console.log(await Produto.findOne({nome: nomeAProcurar}))
+}
+
+// async function atualizaUmProduto
+async function atualizaUmProduto (nomeAProcurar) {
+    console.log(await Produto.findOne({nome: nomeAProcurar}))
+}
+
+
+
+
+
+
 // create novoproduto array
 async function criarNovoProduto(arr) {
     const tamanho = arr.length;
@@ -29,16 +50,6 @@ async function criarNovoProduto(arr) {
         await Produto.create(arr[contador])
      contador++;
     }
-}
-
-// FUNCAO DELETAUMPRODUTO
-async function deletaProduto(nomeADeletar){
-    await Produto.findOneAndDelete({nome: nomeADeletar})
-}
-
-// async function exibeUmProduto
-async function exibeUmProduto (nomeAProcurar) {
-    console.log(await Produto.findOne({nome: nomeAProcurar}))
 }
     
 // criar-const-array-de-produtos
